@@ -250,7 +250,7 @@ def tableFour(dataIn):
     index = np.array([str(x) + "''" for x in range(1, N+1)])
     newPopulation = dataIn[:, 2]
     fenotype = np.array([int(x, 2) for x in newPopulation])
-    koef = np.array([f(x, -1) for x in fenotype])
+    koef = np.array([f(x, -1) for x in fenotype]) #send -1 to function because we find minimum
     data = np.array([index, newPopulation, fenotype, koef])
     data = data.transpose()
     draw_graph(rangex=[-2, 4], rangey=[-20, 30], name="new_population", title="f(x) = 8x - 6x^2 - 5x^3 + 2x^4",
